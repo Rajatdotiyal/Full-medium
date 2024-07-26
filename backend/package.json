@@ -1,0 +1,20 @@
+{
+  "name": "backend",
+  "scripts": {
+    "dev": "wrangler dev src/index.ts",
+    "deploy": "wrangler deploy --minify src/index.ts"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.17.0",
+    "@prisma/extension-accelerate": "^1.1.0",
+    "@rajatdotiyal/medium-common": "^1.0.0",
+    "hono": "^4.5.0",
+    "init": "^0.1.2",
+    "npx": "^10.2.2",
+    "prisma": "^5.17.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20240529.0",
+    "wrangler": "^3.57.2"
+  }
+}
