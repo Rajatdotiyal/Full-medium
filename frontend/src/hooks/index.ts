@@ -40,6 +40,7 @@ export const useBlog = ({id}:{id:string}) =>{
 export const useBlogs = () => {
   const [loading, setLoading] = useState(true);
   const [blogs, setBlogs] = useState<Blog[]>([]);
+  
 
   useEffect(() => {
     async function fetchData() {
@@ -50,7 +51,6 @@ export const useBlogs = () => {
           Authorization : localStorage.getItem("token"),
         }
       });
-      
       setBlogs(response.data.post);
       setLoading(false);
     }
